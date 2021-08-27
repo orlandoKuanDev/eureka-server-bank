@@ -3,5 +3,7 @@ spring:
     name: eureka-server
   cloud:
     config:
-      uri: https://p3-config-server.azurewebsites.net
-  profiles:    active: dev
+      #uri: https://p3-config-server.azurewebsites.net
+      uri: http://localhost:8090
+  profiles:
+    active: dev

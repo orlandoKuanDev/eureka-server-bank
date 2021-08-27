@@ -1,5 +1,4 @@
-FROM openjdk:8
-VOLUME /tmp
-EXPOSE 8090
-ADD ./target/eureka-server-0.0.1-SNAPSHOT.jar eureka-server.jar
-ENTRYPOINT ["java","-jar","/eureka-server.jar"]
+FROM openjdk:8-alpine
+COPY "./target/eureka-server-0.0.1-SNAPSHOT.jar" "appeureka-server.jar"
+EXPOSE 8761
+ENTRYPOINT ["java","-jar","appeureka-server.jar"]
